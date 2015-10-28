@@ -213,6 +213,10 @@ fs.readFile(path.resolve(__dirname, 'config/ipbans.txt'), function (err, data) {
 	Users.checkRangeBanned = Cidr.checker(rangebans);
 });
 
+try {
+	//global.hangman = require('./hangman.js').hangman();
+	global.economy = require('./economy.js');
+} catch (e) {}
 /*********************************************************
  * Start up the REPL server
  *********************************************************/
